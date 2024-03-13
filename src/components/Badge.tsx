@@ -54,11 +54,11 @@ export const Badge = (props: Props) => {
         id="lite-badge"
         style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        {" CiviQs"} // Ruimte toegevoegd voor "CiviQs"
+        {' CiviQs'} // Ruimte toegevoegd voor "CiviQs"
       </a>
       <span> | </span>
       <a
-        href="/voorwaarden" 
+        href="/voorwaarden"
         target="_blank"
         rel="noopener noreferrer"
         style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
