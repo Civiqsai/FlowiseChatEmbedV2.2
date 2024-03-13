@@ -15,7 +15,7 @@ export const Badge = (props: Props) => {
   const appendBadgeIfNecessary = (mutations: MutationRecord[]) => {
     mutations.forEach((mutation) => {
       mutation.removedNodes.forEach((removedNode) => {
-        if ('id' in removedNode && liteBadge && removedNode.id == 'lite-badge') {
+        if ('id' in removedNode && liteBadge && removedNode.id === 'lite-badge') {
           console.log("Sorry, you can't remove the brand 😅");
           props.botContainer?.append(liteBadge);
         }
@@ -47,14 +47,23 @@ export const Badge = (props: Props) => {
       Powered by
       <a
         ref={liteBadge}
-        href={'https://flowiseai.com'}
+        href="https://civiqs.nl"
         target="_blank"
         rel="noopener noreferrer"
         class="lite-badge"
         id="lite-badge"
         style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        <span> Flowise</span>
+        {" CiviQs"} // Ruimte toegevoegd voor "CiviQs"
+      </a>
+      <span> | </span>
+      <a
+        href="/voorwaarden" 
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
+      >
+        Voorwaarden
       </a>
     </span>
   );
